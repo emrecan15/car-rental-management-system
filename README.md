@@ -57,6 +57,22 @@ The application also includes Windows Forms designer/resource files and typed Da
 
 **Important:** The database schema, connection configuration, and any email settings may require additional work. These instructions do not guarantee the application will run on a new computer without configuration.
 
+
+## Application screenshots / Uygulama ekran görüntüleri
+
+The original analysis report contains screenshots of the desktop application. Use the links below to jump to the corresponding report pages:
+
+| Screen / Ekran | Report page / Rapor sayfası |
+| --- | --- |
+| Login / Kullanıcı girişi | [Page 11](./Analiz%20Raporu.pdf#page=11) |
+| Rental / Araç kiralama | [Page 27](./Analiz%20Raporu.pdf#page=27) |
+| Vehicle return / Araç teslimi | [Page 32](./Analiz%20Raporu.pdf#page=32) |
+| Vehicle management / Araç yönetimi | [Page 37](./Analiz%20Raporu.pdf#page=37) |
+| Customer management / Müşteri yönetimi | [Page 52](./Analiz%20Raporu.pdf#page=52) |
+| Admin / Yönetici ekranı | [Page 70](./Analiz%20Raporu.pdf#page=70) |
+
+*Screenshots are from the original project report; no UI changes were made.*
+
 ## Documentation
 
 The original project report, including application screenshots, is available here:
