@@ -1,91 +1,95 @@
 # Car Rental Management System
 
-A Windows desktop application for managing car rental operations, developed with **C#**, **Windows Forms**, and **Microsoft SQL Server**.
+**A desktop application for managing everyday car rental operations.** Built with C#, Windows Forms, and Microsoft SQL Server as an academic project.
 
-> **Project status:** An earlier academic project, preserved in its original implementation. This repository documents the existing application; it is not presented as a ready-to-run deployment.
+<p>
+  <img alt="C#" src="https://img.shields.io/badge/C%23-512BD4?logo=csharp&logoColor=white">
+  <img alt=".NET Framework" src="https://img.shields.io/badge/.NET_Framework-4.7.2-512BD4">
+  <img alt="Windows Forms" src="https://img.shields.io/badge/UI-Windows_Forms-0078D4">
+  <img alt="SQL Server" src="https://img.shields.io/badge/Database-SQL_Server-CC2927">
+</p>
 
-## Features
+[English](#english) · [Türkçe](#türkçe) · [Screenshots](#screenshots) · [Original report](./Analiz%20Raporu.pdf)
 
-Based on the application's existing screens:
+## Screenshots
 
-- User login, registration and password reset
-- Main application dashboard
-- Vehicle management
-- Customer management
-- Vehicle delivery workflow
-- Administrative management screens
-- Account settings
+The following screenshots were extracted from the **original project analysis report**. They show the application's existing UI, without redesign or generated mockups.
 
-## Tech stack
+| Car rental / Araç kiralama | Vehicle management / Araç yönetimi |
+|:---:|:---:|
+| <img src="assets/screenshots/rental.jpg" alt="Car rental screen" width="560"> | <img src="assets/screenshots/vehicle-management.jpg" alt="Vehicle management screen" width="560"> |
 
-| Layer | Technology |
-| --- | --- |
+| Customer management / Müşteri yönetimi | Vehicle return / Araç teslimi |
+|:---:|:---:|
+| <img src="assets/screenshots/customer-management.jpg" alt="Customer management screen" width="560"> | <img src="assets/screenshots/vehicle-return.jpg" alt="Vehicle return screen" width="560"> |
+
+<details>
+<summary><strong>More screens / Diğer ekranlar</strong> (Login and Admin)</summary>
+
+| Login / Giriş | Admin / Yönetici |
+|:---:|:---:|
+| <img src="assets/screenshots/login.jpg" alt="Login screen" width="560"> | <img src="assets/screenshots/admin.jpg" alt="Admin screen" width="560"> |
+
+</details>
+
+---
+
+## English
+
+### Overview
+
+This Windows desktop application was developed to organize rental agency workflows and related records through a graphical interface backed by SQL Server. It includes separate screens for vehicle rentals, vehicle returns, vehicle and customer management, and user administration.
+
+### Features
+
+- **Authentication:** Login, user registration, and password recovery screens.
+- **Rental workflow:** View vehicles and enter rental information.
+- **Returns:** Track and process vehicle deliveries/returns.
+- **Vehicle records:** View, add, edit, and remove vehicle entries.
+- **Customer records:** View and manage customer information.
+- **Administration:** Dedicated administrator screen and account settings.
+
+### Tech stack
+
+| Component | Technology |
+|---|---|
 | Language | C# |
-| UI | Windows Forms |
-| Framework | .NET Framework 4.7.2 |
-| Database | Microsoft SQL Server |
-| Development | Visual Studio |
+| Desktop UI | Windows Forms |
+| Runtime | .NET Framework 4.7.2 |
+| Database | Microsoft SQL Server (MSSQL) |
+| Development environment | Visual Studio |
 
-## Project structure
+### Project layout
 
 ```text
 car-rental-management-system/
 ├── AracKiralamaOtomasyon.sln
-├── AracKiralamaOtomasyon/
-│   ├── Program.cs
-│   ├── LoginScreen.cs
-│   ├── RegisterScreen.cs
-│   ├── MainScreen.cs
-│   ├── AdminScreen.cs
-│   ├── VehicleManagmentScreen.cs
-│   ├── CustomerManagmentScreen.cs
-│   ├── VehicleDeliveryScreen.cs
-│   ├── AccountSettingsScreen.cs
-│   └── ResetPasswordScreen.cs
-└── Analiz Raporu.pdf
+├── AracKiralamaOtomasyon/     # Windows Forms app, designers, datasets, resources
+├── Analiz Raporu.pdf          # Original academic analysis report
+├── assets/
+│   └── screenshots/          # UI captures extracted from the report
+└── README.md
 ```
 
-The application also includes Windows Forms designer/resource files and typed DataSet definitions.
+### Running locally
 
-## Setup notes
+> **Legacy project:** The code was originally configured for the development machine. This repository has not been verified as a turnkey installation on a clean machine.
 
-1. Use **Windows** with Visual Studio and the **.NET Framework 4.7.2 targeting pack**.
+1. On **Windows**, install Visual Studio with .NET desktop development support and the **.NET Framework 4.7.2 targeting pack**.
 2. Open `AracKiralamaOtomasyon.sln`.
-3. Configure an accessible **Microsoft SQL Server** database with the schema and data required by the application.
-4. **Before running**, review the `SqlConnection` strings used in the forms. The original code contains a machine-specific SQL Server instance (`DESKTOP-BTIS91A`) and database name (`Db_AracKiralama`). Adapt these settings to your local environment.
-5. Build and run the project from Visual Studio.
+3. Provide the SQL Server database and schema expected by the project (database name in code: `Db_AracKiralama`).
+4. Update the **machine-specific** SQL connection strings in the form source files to match your SQL Server instance (original server: `DESKTOP-BTIS91A`).
+5. Check any email-related configuration if testing account recovery, then build and run in Visual Studio.
 
-**Important:** The database schema, connection configuration, and any email settings may require additional work. These instructions do not guarantee the application will run on a new computer without configuration.
+The report documents database tables and UI workflows, but is **not** a guaranteed database setup script. Do not use actual personal or production data for initial testing.
 
+### Future improvements
 
-## Application screenshots / Uygulama ekran görüntüleri
-
-The original analysis report contains screenshots of the desktop application. Use the links below to jump to the corresponding report pages:
-
-| Screen / Ekran | Report page / Rapor sayfası |
-| --- | --- |
-| Login / Kullanıcı girişi | [Page 11](./Analiz%20Raporu.pdf#page=11) |
-| Rental / Araç kiralama | [Page 27](./Analiz%20Raporu.pdf#page=27) |
-| Vehicle return / Araç teslimi | [Page 32](./Analiz%20Raporu.pdf#page=32) |
-| Vehicle management / Araç yönetimi | [Page 37](./Analiz%20Raporu.pdf#page=37) |
-| Customer management / Müşteri yönetimi | [Page 52](./Analiz%20Raporu.pdf#page=52) |
-| Admin / Yönetici ekranı | [Page 70](./Analiz%20Raporu.pdf#page=70) |
-
-*Screenshots are from the original project report; no UI changes were made.*
-
-## Documentation
-
-The original project report, including application screenshots, is available here:
-
-**[Analysis Report / Analiz Raporu (PDF)](./Analiz%20Raporu.pdf)**
-
-## Potential improvements
-
-- Centralize and externalize database connection settings
-- Add a reproducible database setup/migration script
-- Improve validation, exception handling and credential management
-- Refactor data access logic out of UI forms
-- Modernize the UI and update the framework in a future revision
+- Move SQL Server connection settings into configuration.
+- Publish a reproducible SQL schema and sample-data setup.
+- Review password handling, email configuration, and input validation.
+- Separate business logic and database access from the Windows Forms UI.
+- Add repeatable tests and modernize the framework when time permits.
 
 ---
 
@@ -93,28 +97,43 @@ The original project report, including application screenshots, is available her
 
 ### Proje hakkında
 
-**Araç Kiralama Yönetim Sistemi**, C# Windows Forms ve Microsoft SQL Server kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Bu depo, daha önce hazırlanmış projenin mevcut sürümünü içerir.
+Bu proje, bir araç kiralama işletmesinin günlük işlemlerini ve kayıtlarını yönetmek amacıyla **C# Windows Forms** ve **Microsoft SQL Server** kullanılarak geliştirilmiş bir masaüstü uygulamasıdır. Mevcut uygulama, kiralama ve teslim işlemlerinin yanı sıra araç, müşteri ve kullanıcı yönetimi ekranları içerir.
 
-### Mevcut ekranlar ve işlevler
+### Özellikler
 
-- Kullanıcı girişi, kayıt ve şifre sıfırlama
-- Ana ekran
-- Araç yönetimi
-- Müşteri yönetimi
-- Araç teslim işlemleri
-- Yönetici ekranı
-- Hesap ayarları
+- **Kullanıcı işlemleri:** Giriş, kayıt olma ve şifre sıfırlama ekranları.
+- **Araç kiralama:** Araçları görüntüleme ve kiralama bilgilerini işleme.
+- **Araç teslimi:** Kiralanan araçların teslim/iade süreçlerini yönetme.
+- **Araç yönetimi:** Araç kayıtlarını listeleme, ekleme, düzenleme ve silme.
+- **Müşteri yönetimi:** Müşteri bilgilerini görüntüleme ve düzenleme.
+- **Yönetim:** Yönetici ekranı ve hesap ayarları.
 
 ### Kullanılan teknolojiler
 
-**C# · Windows Forms · .NET Framework 4.7.2 · Microsoft SQL Server**
+**C# · Windows Forms · .NET Framework 4.7.2 · Microsoft SQL Server · Visual Studio**
 
-### Kurulum notları
+### Yerel ortamda çalıştırma
 
-Windows üzerinde Visual Studio ile `AracKiralamaOtomasyon.sln` dosyasını açabilirsiniz. Uygulamanın çalışması için uygun SQL Server veritabanı ve şeması gereklidir. Kaynak koddaki bağlantı dizeleri eski geliştirme bilgisayarına göre ayarlandığından kendi ortamınıza uyarlanmalıdır. Veritabanı kurulumu tamamlanmadan uygulamanın sorunsuz çalışması beklenmemelidir.
+1. Windows üzerinde Visual Studio ve **.NET Framework 4.7.2 geliştirme bileşenlerini** kurun.
+2. `AracKiralamaOtomasyon.sln` dosyasını Visual Studio ile açın.
+3. Uygulamanın beklediği `Db_AracKiralama` veritabanını ve ilgili tabloları SQL Server'da hazırlayın.
+4. Kaynak kodda bulunan eski bilgisayara özel `DESKTOP-BTIS91A` SQL Server bağlantı dizelerini kendi ortamınıza göre güncelleyin.
+5. Şifre sıfırlama gibi e-posta kullanan işlevleri denemeden önce gerekli ayarları kontrol edin; ardından projeyi derleyin ve çalıştırın.
+
+> **Önemli:** Bu eski bir akademik projedir. Yalnızca depoyu klonlamak, veritabanı ve ortam ayarları tamamlanmadığı sürece uygulamanın çalışacağı anlamına gelmez.
 
 ### Proje raporu
 
-Ekran görüntüleri ve proje analizi için **[Analiz Raporu.pdf](./Analiz%20Raporu.pdf)** dosyasını inceleyebilirsiniz.
+Veritabanı tablolarının anlatımı, kaynak kod açıklamaları ve uygulamanın özgün ekran görüntüleri için **[Analiz Raporu.pdf](./Analiz%20Raporu.pdf)** dosyasına bakabilirsiniz.
 
-> **Not:** Bu README, projenin kaynak koduna veya çalışma mantığına müdahale edilmeden eklenmiştir.
+### Gelecekte yapılabilecek geliştirmeler
+
+- Veritabanı bağlantı ayarlarının merkezi yapılandırmaya taşınması.
+- Kurulabilir SQL şemasının ve örnek verilerin eklenmesi.
+- Parola güvenliği, e-posta ayarları ve doğrulamanın gözden geçirilmesi.
+- Veritabanı işlemlerinin arayüz kodundan ayrılması.
+- Testlerin eklenmesi ve kullanılan teknolojilerin güncellenmesi.
+
+---
+
+**Note / Not:** The original application's source code and UI have been preserved. Screenshots were extracted from the historical project report solely for documentation.
